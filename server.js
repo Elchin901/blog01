@@ -9,6 +9,7 @@ mongoose.connect('mongodb://localhost/blog',
 app.set('viev engine','ejs')
 
 app.use('/articles', articleRouter)
+app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req ,res) =>{
     const articles = [{
