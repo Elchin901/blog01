@@ -3,7 +3,8 @@ const mongoose =  require('mongoose')
 const articleRouter = require('./routes/articles')
 const app = express()
 
-mongoose.connect('mongodb://localhost/blog01')
+mongoose.connect('mongodb://localhost/blog', 
+{ useNewUrlParser:true ,useUnifiedTopology:true})
 
 app.set('viev engine','ejs')
 
